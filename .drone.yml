@@ -17,3 +17,6 @@ steps:
       from_secret: DOCKER_PASSWORD
     tags:
       - latest
+- name: terraform
+  image: jmccann/drone-terraform:1
+  plan: false
