@@ -10,6 +10,7 @@ steps:
 - name: publish
   image: plugins/docker
   repo: dokloud/swam-docker
+  tags: latest
   username: ${DOCKER_USERNAME}
   password: ${DOCKER_PASSWORD}
   when:
