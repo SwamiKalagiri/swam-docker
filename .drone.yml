@@ -10,8 +10,10 @@ steps:
 - name: docker  
   image: plugins/docker
   settings:
-    username: ${DOCKER_USERNAME}
-    password: ${DOCKER_PASSWORD}
     repo: dokloud/swam-docker
+    username:
+      from_secret: DOCKER_USERNAME
+    password:
+      from_secret: DOCKER_PASSWORD
     tags:
       - latest
