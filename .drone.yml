@@ -7,11 +7,11 @@ steps:
   commands:
   - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
   - mvn test -B
-- name: publish
+- name: docker  
   image: plugins/docker
-  repo: dokloud/swam-docker
-  tags: latest
-  username: ${DOCKER_USERNAME}
-  password: ${DOCKER_PASSWORD}
-  when:
-    branch: main
+  settings:
+    username: ${DOCKER_USERNAME}
+    password: ${DOCKER_PASSWORD}
+    repo: dokloud/swam-docker
+    tags:
+      - latest
