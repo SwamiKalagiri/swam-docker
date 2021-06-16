@@ -31,3 +31,4 @@ steps:
     actions:
       - validate
       - plan
+      - apply
