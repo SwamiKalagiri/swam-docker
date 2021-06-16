@@ -18,6 +18,6 @@ steps:
     tags:
       - latest
 - name: terraform
-  image: jmccann/drone-terraform:5.0
+  image: jmccann/drone-terraform:5
   plan: false
   root_dir: infrastructure
