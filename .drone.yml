@@ -19,5 +19,10 @@ steps:
       - latest
 - name: terraform
   image: jmccann/drone-terraform:5
-  plan: false
-  root_dir: infrastructure
+  pull: always
+  settings:
+    tf_version: 1.0.0
+    root_dir: infrastructure/
+    actions:
+      - validate
+      - plan
